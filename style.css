@@ -1,0 +1,252 @@
+/* setup */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN+Guides&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+:root {
+    --first-bg-color: #F3EDC8;
+    --second-bg-color: #EAD196;
+    --light-red: #BF3131;
+    --dark-red: #7D0A0A;
+
+    --title-font: "Playwrite VN Guides", cursive;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--dark-red) var(--first-bg-color);
+}
+body {
+    background-color: var(--first-bg-color);
+    font-family: "Roboto", sans-serif;
+}
+
+/* nav */
+nav {
+    border-bottom: 5px solid white;
+    background-color: var(--first-bg-color);
+    padding: 1rem 3rem 1rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: var(--light-red);
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.right-nav a {
+    text-decoration: none;
+    color: var(--light-red);
+    font-size: 1.8rem;
+    font-weight: 900;
+    transition: 0.2s ease-in-out;
+}
+.right-nav a:hover {
+    color: white;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 750px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+/* about */
+.about-me {
+    background-color: var(--second-bg-color);
+    padding: 1rem 3rem;
+    border-bottom: 5px solid white;
+}
+.heading {
+    color: var(--light-red);
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+}
+.left-about img {
+    border: 5px solid white;
+    border-radius: 1rem;
+}
+.about-section {
+    margin-top: 1rem;
+    display: flex;
+}
+.right-about {
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+}
+.right-about h1 {
+    padding-bottom: 1rem;
+    color: var(--dark-red);
+}
+.right-about-text {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 5px solid var(--dark-red);
+}
+.right-about-text p {
+    color: rgb(67, 67, 67);
+}
+
+.about-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+}
+.about-links img {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.about-links img:hover {
+    width: 3rem;
+}
+
+@media (max-width: 1050px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-links {
+        justify-content: center;
+    }
+    .right-about {
+        margin: 0;
+    }
+}
+
+/* work */
+
+.work {
+    padding: 1rem 3rem;
+    border-bottom: 5px solid white;
+}
+.work-cards {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1000px) {
+    .work-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .work-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    max-width: 30rem;
+    min-height: 30rem;
+    border: 3px solid var(--dark-red);
+}
+.card-image {
+    height: 20rem;
+    background-color: var(--light-red);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+
+    border-bottom: 3px solid var(--dark-red);
+}
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.3rem;
+}
+.card-links {
+    display: flex;
+    gap: 1rem;
+}
+.card-links img {
+    transition: 0.2s ease-in-out;
+}
+.card-links img:hover {
+    width: 2rem;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.card-description {
+    padding: 0.5rem 0.3rem;
+}
+
+/* contact */
+.contact {
+    background-color: var(--second-bg-color);
+    padding: 1rem 3rem;
+    border-bottom: 5px solid white;
+}
+.contact-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+.contact-links {
+    display: flex;
+    gap: 1rem;
+}
+.left-contact {
+    margin-top: 5px;
+}
+.left-contact p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.wrapped-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.right-contact img {
+    border: 5px solid white;
+    border-radius: 1rem;
+}
+
+@media (max-width: 1150px) {
+    .wrapped-contact {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .right-contact img {
+        width: 30rem;
+    }
+}
+
+/* footer */
+footer {
+    background-color: var(--first-bg-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-family: var(--title-font);
+    border-bottom: 5px solid white;
+}
